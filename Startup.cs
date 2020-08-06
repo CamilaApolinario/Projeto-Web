@@ -39,6 +39,7 @@ namespace ProjetoWebApplication
             services.AddDbContext<ProjetoWebApplicationContext>(options =>
                    options.UseMySql(Configuration.GetConnectionString("ProjetoWebApplicationContext"), builder =>
                            builder.MigrationsAssembly("ProjetoWebApplication")));
+            services.AddScoped<SeedingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
