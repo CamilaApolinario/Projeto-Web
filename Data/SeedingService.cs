@@ -9,7 +9,7 @@ namespace ProjetoWebApplication.Data
 {
     public class SeedingService
     {
-        private ProjetoWebApplicationContext _context;
+        private readonly ProjetoWebApplicationContext _context;
         public SeedingService(ProjetoWebApplicationContext context)
         {
             _context = context;
