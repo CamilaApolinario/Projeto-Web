@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ProjetoWebApplication.Data;
+using ProjetoWebApplication.Services;
 
 namespace ProjetoWebApplication
 {
@@ -39,7 +40,9 @@ namespace ProjetoWebApplication
             services.AddDbContext<ProjetoWebApplicationContext>(options =>
                    options.UseMySql(Configuration.GetConnectionString("ProjetoWebApplicationContext"), builder =>
                            builder.MigrationsAssembly("ProjetoWebApplication")));
+
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
