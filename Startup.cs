@@ -42,7 +42,8 @@ namespace ProjetoWebApplication
                            builder.MigrationsAssembly("ProjetoWebApplication")));
 
             services.AddScoped<SeedingService>();
-            services.AddScoped<SellerServices>();
+            services.AddScoped<SellerService>();
+            services.AddScoped<DepartmentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
